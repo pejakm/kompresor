@@ -59,6 +59,7 @@ Details
  * .balz	(`balz`)
 
 **Dependencies**
+
 KDE SC4, Dolphin or Konqueror.
 bsdtar, bsdcpio, gzip, bzip, xz are found as common programs on most distros.
 Check above what do you need for all service menus to be displayed and usable.
@@ -66,7 +67,7 @@ Check above what do you need for all service menus to be displayed and usable.
 Current version
 ----------------------------------------------------------------------------------------
 
-The current stable version of QupZilla is 0.1
+The current stable version of Kompresor service menus is 0.1
 
 FAQ and Changelog
 ----------------------------------------------------------------------------------------
