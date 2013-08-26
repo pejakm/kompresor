@@ -1,0 +1,112 @@
+### Kompresor v0.1;
+# KDE4 service menu
+# zoo compressing
+# GPLv3
+# © Mladen Pejaković <pejakm@cryptolab.net>, 2013.
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;
+Actions=addToZoo;
+X-KDE-Submenu=Compress
+X-KDE-Submenu[ar]=اضغط
+X-KDE-Submenu[bg]=Компресиране
+X-KDE-Submenu[ca]=Compressió
+X-KDE-Submenu[ca@valencia]=Compressió
+X-KDE-Submenu[cs]=Zkomprimovat
+X-KDE-Submenu[da]=Komprimér
+X-KDE-Submenu[de]=Komprimieren
+X-KDE-Submenu[el]=Συμπίεση
+X-KDE-Submenu[en_GB]=Compress
+X-KDE-Submenu[es]=Comprimir
+X-KDE-Submenu[et]=Paki
+X-KDE-Submenu[eu]=Konprimatu
+X-KDE-Submenu[fi]=Tiivistä
+X-KDE-Submenu[fr]=Compresser
+X-KDE-Submenu[ga]=Comhbhrúigh
+X-KDE-Submenu[gl]=Comprimir
+X-KDE-Submenu[hne]=संपीडित करव
+X-KDE-Submenu[hr]=Zapakiraj
+X-KDE-Submenu[hu]=Tömörítés
+X-KDE-Submenu[it]=Comprimi
+X-KDE-Submenu[ja]=圧縮
+X-KDE-Submenu[km]=បង្ហាប់
+X-KDE-Submenu[ko]=압축하기
+X-KDE-Submenu[lt]=Suspausti
+X-KDE-Submenu[lv]=Saspiest
+X-KDE-Submenu[nb]=Komprimer
+X-KDE-Submenu[nds]=Komprimeren
+X-KDE-Submenu[nl]=Comprimeren
+X-KDE-Submenu[nn]=Komprimer
+X-KDE-Submenu[pa]=ਕੰਪਰੈੱਸ
+X-KDE-Submenu[pl]=Kompresuj
+X-KDE-Submenu[pt]=Comprimir
+X-KDE-Submenu[pt_BR]=Compactar
+X-KDE-Submenu[ro]=Comprimă
+X-KDE-Submenu[ru]=Упаковать
+X-KDE-Submenu[sk]=Komprimovať
+X-KDE-Submenu[sl]=Stisni
+X-KDE-Submenu[sr]=Компресуј
+X-KDE-Submenu[sr@ijekavian]=Компресуј
+X-KDE-Submenu[sr@ijekavianlatin]=Kompresuj
+X-KDE-Submenu[sr@latin]=Kompresuj
+X-KDE-Submenu[sv]=Compress
+X-KDE-Submenu[th]=บีบข้อมูล
+X-KDE-Submenu[tr]=Sıkıştır
+X-KDE-Submenu[uk]=Стиснути
+X-KDE-Submenu[x-test]=xxCompressxx
+X-KDE-Submenu[zh_CN]=压缩
+X-KDE-Submenu[zh_TW]=壓縮
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+TryExec=zoo
+
+[Desktop Action addToZoo]
+Name=As ZOO Archive
+Name[ar]=ك أرشيف ZOO
+Name[ca]=Com a arxiu ZOO
+Name[ca@valencia]=Com a arxiu ZOO
+Name[cs]=Jako ZOO archív
+Name[da]=Som ZOO-arkiv
+Name[de]=Als ZOO-Archiv
+Name[en_GB]=As ZOO Archive
+Name[es]=Como archivo comprimido ZOO
+Name[et]=ZOO-arhiivina
+Name[eu]=ZOO artxibo gisa
+Name[fi]=Zoo-arkistoksi
+Name[fr]=En tant qu'archive ZOO
+Name[gl]=Como arquivo ZOO
+Name[hr]=Kao ZOO-arhiva
+Name[hu]=ZOO archívumként
+Name[it]=Come archivio ZOO
+Name[ja]=ZOO アーカイブに
+Name[km]=ជា​ប័ណ្ណសារ ZOO
+Name[lt]=ZOO archyvas
+Name[lv]=Kā ZOO arhīvu
+Name[nb]=Som ZOO-arkiv
+Name[nds]=As Zoo-Archiev
+Name[nl]=Als ZOO-archief
+Name[nn]=Som ZOO-arkiv
+Name[pa]=ਜ਼ਿਪ ਅਕਾਇਵ ਵਾਂਗ
+Name[pl]=Jako archiwum ZOO
+Name[pt]=Como Pacote ZOO
+Name[pt_BR]=Como arquivo ZOO
+Name[ro]=Ca arhivă ZOO
+Name[ru]=Как архив ZOO
+Name[sk]=Do ZOO archívu
+Name[sl]=Kot arhiv ZOO
+Name[sr]=као ЗОО архиву
+Name[sr@ijekavian]=као ЗОО архиву
+Name[sr@ijekavianlatin]=kao ZOO arhivu
+Name[sr@latin]=kao ZOO arhivu
+Name[sv]=Som ZOO-arkiv
+Name[tr]=ZOO Arşivi Olarak
+Name[uk]=Як архів ZOO
+Name[x-test]=xxAs ZOO Archivexx
+Name[zh_CN]=为 ZOO 归档
+Name[zh_TW]=成 ZOO 壓縮檔
+Icon=application-zip
+### FIXME - directories arent added!
+Exec=out=`cd %D && zoo ah archive.zoo %N 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && zoo ah arhiva.zoo %N 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

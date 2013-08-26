@@ -1,0 +1,111 @@
+### Kompresor v0.1;
+# KDE4 service menu
+# lzo compressing
+# GPLv3
+# © Mladen Pejaković <pejakm@cryptolab.net>, 2013.
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;
+Actions=addToLzo;
+X-KDE-Submenu=Compress
+X-KDE-Submenu[ar]=اضغط
+X-KDE-Submenu[bg]=Компресиране
+X-KDE-Submenu[ca]=Compressió
+X-KDE-Submenu[ca@valencia]=Compressió
+X-KDE-Submenu[cs]=Zkomprimovat
+X-KDE-Submenu[da]=Komprimér
+X-KDE-Submenu[de]=Komprimieren
+X-KDE-Submenu[el]=Συμπίεση
+X-KDE-Submenu[en_GB]=Compress
+X-KDE-Submenu[es]=Comprimir
+X-KDE-Submenu[et]=Paki
+X-KDE-Submenu[eu]=Konprimatu
+X-KDE-Submenu[fi]=Tiivistä
+X-KDE-Submenu[fr]=Compresser
+X-KDE-Submenu[ga]=Comhbhrúigh
+X-KDE-Submenu[gl]=Comprimir
+X-KDE-Submenu[hne]=संपीडित करव
+X-KDE-Submenu[hr]=Zapakiraj
+X-KDE-Submenu[hu]=Tömörítés
+X-KDE-Submenu[it]=Comprimi
+X-KDE-Submenu[ja]=圧縮
+X-KDE-Submenu[km]=បង្ហាប់
+X-KDE-Submenu[ko]=압축하기
+X-KDE-Submenu[lt]=Suspausti
+X-KDE-Submenu[lv]=Saspiest
+X-KDE-Submenu[nb]=Komprimer
+X-KDE-Submenu[nds]=Komprimeren
+X-KDE-Submenu[nl]=Comprimeren
+X-KDE-Submenu[nn]=Komprimer
+X-KDE-Submenu[pa]=ਕੰਪਰੈੱਸ
+X-KDE-Submenu[pl]=Kompresuj
+X-KDE-Submenu[pt]=Comprimir
+X-KDE-Submenu[pt_BR]=Compactar
+X-KDE-Submenu[ro]=Comprimă
+X-KDE-Submenu[ru]=Упаковать
+X-KDE-Submenu[sk]=Komprimovať
+X-KDE-Submenu[sl]=Stisni
+X-KDE-Submenu[sr]=Компресуј
+X-KDE-Submenu[sr@ijekavian]=Компресуј
+X-KDE-Submenu[sr@ijekavianlatin]=Kompresuj
+X-KDE-Submenu[sr@latin]=Kompresuj
+X-KDE-Submenu[sv]=Compress
+X-KDE-Submenu[th]=บีบข้อมูล
+X-KDE-Submenu[tr]=Sıkıştır
+X-KDE-Submenu[uk]=Стиснути
+X-KDE-Submenu[x-test]=xxCompressxx
+X-KDE-Submenu[zh_CN]=压缩
+X-KDE-Submenu[zh_TW]=壓縮
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+TryExec=lzop
+
+[Desktop Action addToLzo]
+Name=As LZO Archive
+Name[ar]=كأرشيف LZO
+Name[ca]=Com a arxiu LZO
+Name[ca@valencia]=Com a arxiu LZO
+Name[cs]=Jako LZO archív
+Name[da]=Som LZO-arkiv
+Name[de]=Als LZO-Archiv
+Name[en_GB]=As LZO Archive
+Name[es]=Como archivo comprimido LZO
+Name[et]=LZO-arhiivina
+Name[eu]=LZO artxiboa gisa
+Name[fi]=Lzo-arkistoksi
+Name[fr]=En tant qu'archive LZO
+Name[gl]=Como arquivo LZO
+Name[hr]=Kao LZO-arhiva
+Name[hu]=LZO archívumként
+Name[it]=Come archivio LZO
+Name[ja]=LZO アーカイブに
+Name[km]=​ជា​ប័ណ្ណសារ LZO
+Name[lt]=LZO archyvas
+Name[lv]=Kā LZO arhīvu
+Name[nb]=Som LZO-arkiv
+Name[nds]=As Lzo-Archiev
+Name[nl]=Als LZO-archief
+Name[nn]=Som LZO-arkiv
+Name[pa]=LZO ਅਕਾਇਵ ਵਾਂਗ
+Name[pl]=Jako archiwum LZO
+Name[pt]=Como Pacote LZO
+Name[pt_BR]=Como arquivo LZO
+Name[ro]=Ca arhivă LZO
+Name[ru]=Как архив LZO
+Name[sk]=Do LZO archívu
+Name[sl]=Kot arhiv LZO
+Name[sr]=као ЛЗО архиву
+Name[sr@ijekavian]=као ЛЗО архиву
+Name[sr@ijekavianlatin]=kao LZO arhivu
+Name[sr@latin]=kao LZO arhivu
+Name[sv]=Som LZO-arkiv
+Name[tr]=LZO Arşivi Olarak
+Name[uk]=Як архів LZO
+Name[x-test]=xxAs LZO Archivexx
+Name[zh_CN]=为 LZO 归档
+Name[zh_TW]=成 LZO 壓縮檔
+Icon=application-x-lzop
+Exec=out=`cd %D && lzop -9 -oarchive.lzo %N 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && lzop -9 -oarhiva.lzo %N 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

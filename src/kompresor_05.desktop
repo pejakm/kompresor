@@ -1,0 +1,111 @@
+### Kompresor v0.1;
+# KDE4 service menu
+# zip compressing
+# GPLv3
+# © Mladen Pejaković <pejakm@cryptolab.net>, 2013.
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;
+Actions=addToZipAdv;
+X-KDE-Submenu=Compress
+X-KDE-Submenu[ar]=اضغط
+X-KDE-Submenu[bg]=Компресиране
+X-KDE-Submenu[ca]=Compressió
+X-KDE-Submenu[ca@valencia]=Compressió
+X-KDE-Submenu[cs]=Zkomprimovat
+X-KDE-Submenu[da]=Komprimér
+X-KDE-Submenu[de]=Komprimieren
+X-KDE-Submenu[el]=Συμπίεση
+X-KDE-Submenu[en_GB]=Compress
+X-KDE-Submenu[es]=Comprimir
+X-KDE-Submenu[et]=Paki
+X-KDE-Submenu[eu]=Konprimatu
+X-KDE-Submenu[fi]=Tiivistä
+X-KDE-Submenu[fr]=Compresser
+X-KDE-Submenu[ga]=Comhbhrúigh
+X-KDE-Submenu[gl]=Comprimir
+X-KDE-Submenu[hne]=संपीडित करव
+X-KDE-Submenu[hr]=Zapakiraj
+X-KDE-Submenu[hu]=Tömörítés
+X-KDE-Submenu[it]=Comprimi
+X-KDE-Submenu[ja]=圧縮
+X-KDE-Submenu[km]=បង្ហាប់
+X-KDE-Submenu[ko]=압축하기
+X-KDE-Submenu[lt]=Suspausti
+X-KDE-Submenu[lv]=Saspiest
+X-KDE-Submenu[nb]=Komprimer
+X-KDE-Submenu[nds]=Komprimeren
+X-KDE-Submenu[nl]=Comprimeren
+X-KDE-Submenu[nn]=Komprimer
+X-KDE-Submenu[pa]=ਕੰਪਰੈੱਸ
+X-KDE-Submenu[pl]=Kompresuj
+X-KDE-Submenu[pt]=Comprimir
+X-KDE-Submenu[pt_BR]=Compactar
+X-KDE-Submenu[ro]=Comprimă
+X-KDE-Submenu[ru]=Упаковать
+X-KDE-Submenu[sk]=Komprimovať
+X-KDE-Submenu[sl]=Stisni
+X-KDE-Submenu[sr]=Компресуј
+X-KDE-Submenu[sr@ijekavian]=Компресуј
+X-KDE-Submenu[sr@ijekavianlatin]=Kompresuj
+X-KDE-Submenu[sr@latin]=Kompresuj
+X-KDE-Submenu[sv]=Compress
+X-KDE-Submenu[th]=บีบข้อมูล
+X-KDE-Submenu[tr]=Sıkıştır
+X-KDE-Submenu[uk]=Стиснути
+X-KDE-Submenu[x-test]=xxCompressxx
+X-KDE-Submenu[zh_CN]=压缩
+X-KDE-Submenu[zh_TW]=壓縮
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+TryExec=zip
+
+[Desktop Action addToZipAdv]
+Name=As PKZIP Archive
+Name[ar]=ك أرشيف PKZIP
+Name[ca]=Com a arxiu PKZIP
+Name[ca@valencia]=Com a arxiu PKZIP
+Name[cs]=Jako PKZIP archív
+Name[da]=Som PKZIP-arkiv
+Name[de]=Als PKZIP-Archiv
+Name[en_GB]=As PKZIP Archive
+Name[es]=Como archivo comprimido PKZIP
+Name[et]=PKZIP-arhiivina
+Name[eu]=PKZIP artxibo gisa
+Name[fi]=PKZip-arkistoksi
+Name[fr]=En tant qu'archive PKZIP
+Name[gl]=Como arquivo PKZIP
+Name[hr]=Kao PKZIP-arhiva
+Name[hu]=PKZIP archívumként
+Name[it]=Come archivio PKZIP
+Name[ja]=PKZIP アーカイブに
+Name[km]=ជា​ប័ណ្ណសារ PKZIP
+Name[lt]=PKZIP archyvas
+Name[lv]=Kā PKZIP arhīvu
+Name[nb]=Som PKZIP-arkiv
+Name[nds]=As PKZip-Archiev
+Name[nl]=Als PKZIP-archief
+Name[nn]=Som PKZIP-arkiv
+Name[pa]=ਜ਼ਿਪ ਅਕਾਇਵ ਵਾਂਗ
+Name[pl]=Jako archiwum PKZIP
+Name[pt]=Como Pacote PKZIP
+Name[pt_BR]=Como arquivo PKZIP
+Name[ro]=Ca arhivă PKZIP
+Name[ru]=Как архив PKZIP
+Name[sk]=Do PKZIP archívu
+Name[sl]=Kot arhiv PKZIP
+Name[sr]=као ПКЗИП архиву
+Name[sr@ijekavian]=као ПКЗИП архиву
+Name[sr@ijekavianlatin]=kao PKZIP arhivu
+Name[sr@latin]=kao PKZIP arhivu
+Name[sv]=Som PKZIP-arkiv
+Name[tr]=PKZIP Arşivi Olarak
+Name[uk]=Як архів PKZIP
+Name[x-test]=xxAs PKZIP Archivexx
+Name[zh_CN]=为 PKZIP 归档
+Name[zh_TW]=成 PKZIP 壓縮檔
+Icon=application-zip
+Exec=ime=`kdialog --inputbox "Name:" "archive"`; if [ "$ime" = "" ]; then exit 0; fi && crt=`kdialog --menu "Compression level:" 0 "0 (none)" 1 "1 (fastest)" 2 "2" 3 "3" 4 "4" 5 "5" 6 "6 (default)" 7 "7" 8 "8" 9 "9 (best)" --default "6 (default)" --geometry 40x220`; if [ "$crt" = "" ]; then exit 0; fi && cmthd=`kdialog --combobox "Compression method:" store deflate bzip2 --default "deflate" --geometry 50x100`; if [ "$cmthd" = "" ]; then exit 0; fi && pass=`kdialog --password "Enter password\n(leave blank for no password)"`; if [ "$pass" = "" ]; then passop=""; else passop="-P $pass"; fi && out=`cd %D && zip -r9 -Z $cmthd $passop $ime.zip %N 2>&1` && kdialog --passivepopup "Done adding '%N' to the $ime.$nast!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=ime=`kdialog --inputbox "Назив:" "arhiva"`; if [ "$ime" = "" ]; then exit 0; fi && crt=`kdialog --menu "Ниво компресије:" 0 "0 (без компресије)" 1 "1 (најслабија)" 2 "2" 3 "3" 4 "4" 5 "5" 6 "6 (подразумијевана)" 7 "7" 8 "8" 9 "9 (најбоља)" --default "6 (подразумијевана)" --geometry 40x220`; if [ "$crt" = "" ]; then exit 0; fi && cmthd=`kdialog --combobox "Метод компресије:" store deflate bzip2 --default "deflate" --geometry 50x100`; if [ "$cmthd" = "" ]; then exit 0; fi && pass=`kdialog --password "Унесите лозинку\n(оставите празно ако не желите лозинку)"`; if [ "$pass" = "" ]; then passop=""; else passop="-P $pass"; fi && out=`cd %D && zip -r9 -Z $cmthd $passop $ime.zip %N 2>&1` && kdialog --passivepopup "Паковање '%N' у $ime.$nast је завршено!" || kdialog --error "Грешка:\n$out"

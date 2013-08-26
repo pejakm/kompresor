@@ -1,0 +1,111 @@
+### Kompresor v0.1;
+# KDE4 service menu
+# xz compressing
+# GPLv3
+# © Mladen Pejaković <pejakm@cryptolab.net>, 2013.
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+Actions=addToXz;
+X-KDE-Submenu=Compress
+X-KDE-Submenu[ar]=اضغط
+X-KDE-Submenu[bg]=Компресиране
+X-KDE-Submenu[ca]=Compressió
+X-KDE-Submenu[ca@valencia]=Compressió
+X-KDE-Submenu[cs]=Zkomprimovat
+X-KDE-Submenu[da]=Komprimér
+X-KDE-Submenu[de]=Komprimieren
+X-KDE-Submenu[el]=Συμπίεση
+X-KDE-Submenu[en_GB]=Compress
+X-KDE-Submenu[es]=Comprimir
+X-KDE-Submenu[et]=Paki
+X-KDE-Submenu[eu]=Konprimatu
+X-KDE-Submenu[fi]=Tiivistä
+X-KDE-Submenu[fr]=Compresser
+X-KDE-Submenu[ga]=Comhbhrúigh
+X-KDE-Submenu[gl]=Comprimir
+X-KDE-Submenu[hne]=संपीडित करव
+X-KDE-Submenu[hr]=Zapakiraj
+X-KDE-Submenu[hu]=Tömörítés
+X-KDE-Submenu[it]=Comprimi
+X-KDE-Submenu[ja]=圧縮
+X-KDE-Submenu[km]=បង្ហាប់
+X-KDE-Submenu[ko]=압축하기
+X-KDE-Submenu[lt]=Suspausti
+X-KDE-Submenu[lv]=Saspiest
+X-KDE-Submenu[nb]=Komprimer
+X-KDE-Submenu[nds]=Komprimeren
+X-KDE-Submenu[nl]=Comprimeren
+X-KDE-Submenu[nn]=Komprimer
+X-KDE-Submenu[pa]=ਕੰਪਰੈੱਸ
+X-KDE-Submenu[pl]=Kompresuj
+X-KDE-Submenu[pt]=Comprimir
+X-KDE-Submenu[pt_BR]=Compactar
+X-KDE-Submenu[ro]=Comprimă
+X-KDE-Submenu[ru]=Упаковать
+X-KDE-Submenu[sk]=Komprimovať
+X-KDE-Submenu[sl]=Stisni
+X-KDE-Submenu[sr]=Компресуј
+X-KDE-Submenu[sr@ijekavian]=Компресуј
+X-KDE-Submenu[sr@ijekavianlatin]=Kompresuj
+X-KDE-Submenu[sr@latin]=Kompresuj
+X-KDE-Submenu[sv]=Compress
+X-KDE-Submenu[th]=บีบข้อมูล
+X-KDE-Submenu[tr]=Sıkıştır
+X-KDE-Submenu[uk]=Стиснути
+X-KDE-Submenu[x-test]=xxCompressxx
+X-KDE-Submenu[zh_CN]=压缩
+X-KDE-Submenu[zh_TW]=壓縮
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+TryExec=xz
+
+[Desktop Action addToXz]
+Name=As XZ Archive
+Name[ar]=كأرشيف XZ
+Name[ca]=Com a arxiu XZ
+Name[ca@valencia]=Com a arxiu XZ
+Name[cs]=Jako XZ archív
+Name[da]=Som XZ-arkiv
+Name[de]=Als XZ-Archiv
+Name[en_GB]=As XZ Archive
+Name[es]=Como archivo comprimido XZ
+Name[et]=XZ-arhiivina
+Name[eu]=XZ artxiboa gisa
+Name[fi]=Xz-arkistoksi
+Name[fr]=En tant qu'archive XZ
+Name[gl]=Como arquivo XZ
+Name[hr]=Kao XZ-arhiva
+Name[hu]=XZ archívumként
+Name[it]=Come archivio XZ
+Name[ja]=XZ アーカイブに
+Name[km]=​ជា​ប័ណ្ណសារ XZ
+Name[lt]=XZ archyvas
+Name[lv]=Kā XZ arhīvu
+Name[nb]=Som XZ-arkiv
+Name[nds]=As Xz-Archiev
+Name[nl]=Als XZ-archief
+Name[nn]=Som XZ-arkiv
+Name[pa]=XZ ਅਕਾਇਵ ਵਾਂਗ
+Name[pl]=Jako archiwum XZ
+Name[pt]=Como Pacote XZ
+Name[pt_BR]=Como arquivo XZ
+Name[ro]=Ca arhivă XZ
+Name[ru]=Как архив XZ
+Name[sk]=Do XZ archívu
+Name[sl]=Kot arhiv XZ
+Name[sr]=као XZ архиву
+Name[sr@ijekavian]=као XZ архиву
+Name[sr@ijekavianlatin]=kao XZ arhivu
+Name[sr@latin]=kao XZ arhivu
+Name[sv]=Som XZ-arkiv
+Name[tr]=XZ Arşivi Olarak
+Name[uk]=Як архів XZ
+Name[x-test]=xxAs XZ Archivexx
+Name[zh_CN]=为 XZ 归档
+Name[zh_TW]=成 XZ 壓縮檔
+Icon=application-x-bzip
+Exec=out=`xz -zk9 %U 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`xz -zk9 %U 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

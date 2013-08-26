@@ -1,0 +1,111 @@
+### Kompresor v0.1;
+# KDE4 service menu
+# quad compressing
+# GPLv3
+# © Mladen Pejaković <pejakm@cryptolab.net>, 2013.
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+Actions=addToQuad;
+X-KDE-Submenu=Compress
+X-KDE-Submenu[ar]=اضغط
+X-KDE-Submenu[bg]=Компресиране
+X-KDE-Submenu[ca]=Compressió
+X-KDE-Submenu[ca@valencia]=Compressió
+X-KDE-Submenu[cs]=Zkomprimovat
+X-KDE-Submenu[da]=Komprimér
+X-KDE-Submenu[de]=Komprimieren
+X-KDE-Submenu[el]=Συμπίεση
+X-KDE-Submenu[en_GB]=Compress
+X-KDE-Submenu[es]=Comprimir
+X-KDE-Submenu[et]=Paki
+X-KDE-Submenu[eu]=Konprimatu
+X-KDE-Submenu[fi]=Tiivistä
+X-KDE-Submenu[fr]=Compresser
+X-KDE-Submenu[ga]=Comhbhrúigh
+X-KDE-Submenu[gl]=Comprimir
+X-KDE-Submenu[hne]=संपीडित करव
+X-KDE-Submenu[hr]=Zapakiraj
+X-KDE-Submenu[hu]=Tömörítés
+X-KDE-Submenu[it]=Comprimi
+X-KDE-Submenu[ja]=圧縮
+X-KDE-Submenu[km]=បង្ហាប់
+X-KDE-Submenu[ko]=압축하기
+X-KDE-Submenu[lt]=Suspausti
+X-KDE-Submenu[lv]=Saspiest
+X-KDE-Submenu[nb]=Komprimer
+X-KDE-Submenu[nds]=Komprimeren
+X-KDE-Submenu[nl]=Comprimeren
+X-KDE-Submenu[nn]=Komprimer
+X-KDE-Submenu[pa]=ਕੰਪਰੈੱਸ
+X-KDE-Submenu[pl]=Kompresuj
+X-KDE-Submenu[pt]=Comprimir
+X-KDE-Submenu[pt_BR]=Compactar
+X-KDE-Submenu[ro]=Comprimă
+X-KDE-Submenu[ru]=Упаковать
+X-KDE-Submenu[sk]=Komprimovať
+X-KDE-Submenu[sl]=Stisni
+X-KDE-Submenu[sr]=Компресуј
+X-KDE-Submenu[sr@ijekavian]=Компресуј
+X-KDE-Submenu[sr@ijekavianlatin]=Kompresuj
+X-KDE-Submenu[sr@latin]=Kompresuj
+X-KDE-Submenu[sv]=Compress
+X-KDE-Submenu[th]=บีบข้อมูล
+X-KDE-Submenu[tr]=Sıkıştır
+X-KDE-Submenu[uk]=Стиснути
+X-KDE-Submenu[x-test]=xxCompressxx
+X-KDE-Submenu[zh_CN]=压缩
+X-KDE-Submenu[zh_TW]=壓縮
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+TryExec=quad
+
+[Desktop Action addToQuad]
+Name=As QUAD Archive
+Name[ar]=كأرشيف QUAD
+Name[ca]=Com a arxiu QUAD
+Name[ca@valencia]=Com a arxiu QUAD
+Name[cs]=Jako QUAD archív
+Name[da]=Som QUAD-arkiv
+Name[de]=Als QUAD-Archiv
+Name[en_GB]=As QUAD Archive
+Name[es]=Como archivo comprimido QUAD
+Name[et]=QUAD-arhiivina
+Name[eu]=QUAD artxiboa gisa
+Name[fi]=Quad-arkistoksi
+Name[fr]=En tant qu'archive QUAD
+Name[gl]=Como arquivo QUAD
+Name[hr]=Kao QUAD-arhiva
+Name[hu]=QUAD archívumként
+Name[it]=Come archivio QUAD
+Name[ja]=QUAD アーカイブに
+Name[km]=​ជា​ប័ណ្ណសារ QUAD
+Name[lt]=QUAD archyvas
+Name[lv]=Kā QUAD arhīvu
+Name[nb]=Som QUAD-arkiv
+Name[nds]=As Quad-Archiev
+Name[nl]=Als QUAD-archief
+Name[nn]=Som QUAD-arkiv
+Name[pa]=QUAD ਅਕਾਇਵ ਵਾਂਗ
+Name[pl]=Jako archiwum QUAD
+Name[pt]=Como Pacote QUAD
+Name[pt_BR]=Como arquivo QUAD
+Name[ro]=Ca arhivă QUAD
+Name[ru]=Как архив QUAD
+Name[sk]=Do QUAD archívu
+Name[sl]=Kot arhiv QUAD
+Name[sr]=као КВОД архиву
+Name[sr@ijekavian]=као КВОД архиву
+Name[sr@ijekavianlatin]=kao QUAD arhivu
+Name[sr@latin]=kao QUAD arhivu
+Name[sv]=Som QUAD-arkiv
+Name[tr]=QUAD Arşivi Olarak
+Name[uk]=Як архів QUAD
+Name[x-test]=xxAs QUAD Archivexx
+Name[zh_CN]=为 QUAD 归档
+Name[zh_TW]=成 QUAD 壓縮檔
+Icon=application-x-compress
+Exec=out=`quad -x %u 2>&1` && kdialog --passivepopup "Done compressing '%u'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`quad -x %u 2>&1` && kdialog --passivepopup "Паковање '%u' завршено!" || kdialog --error "Грешка:\n$out"

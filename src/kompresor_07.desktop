@@ -1,0 +1,111 @@
+### Kompresor v0.1;
+# KDE4 service menu
+# lrzip compressing
+# GPLv3
+# © Mladen Pejaković <pejakm@cryptolab.net>, 2013.
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+Actions=addToLrzip;
+X-KDE-Submenu=Compress
+X-KDE-Submenu[ar]=اضغط
+X-KDE-Submenu[bg]=Компресиране
+X-KDE-Submenu[ca]=Compressió
+X-KDE-Submenu[ca@valencia]=Compressió
+X-KDE-Submenu[cs]=Zkomprimovat
+X-KDE-Submenu[da]=Komprimér
+X-KDE-Submenu[de]=Komprimieren
+X-KDE-Submenu[el]=Συμπίεση
+X-KDE-Submenu[en_GB]=Compress
+X-KDE-Submenu[es]=Comprimir
+X-KDE-Submenu[et]=Paki
+X-KDE-Submenu[eu]=Konprimatu
+X-KDE-Submenu[fi]=Tiivistä
+X-KDE-Submenu[fr]=Compresser
+X-KDE-Submenu[ga]=Comhbhrúigh
+X-KDE-Submenu[gl]=Comprimir
+X-KDE-Submenu[hne]=संपीडित करव
+X-KDE-Submenu[hr]=Zapakiraj
+X-KDE-Submenu[hu]=Tömörítés
+X-KDE-Submenu[it]=Comprimi
+X-KDE-Submenu[ja]=圧縮
+X-KDE-Submenu[km]=បង្ហាប់
+X-KDE-Submenu[ko]=압축하기
+X-KDE-Submenu[lt]=Suspausti
+X-KDE-Submenu[lv]=Saspiest
+X-KDE-Submenu[nb]=Komprimer
+X-KDE-Submenu[nds]=Komprimeren
+X-KDE-Submenu[nl]=Comprimeren
+X-KDE-Submenu[nn]=Komprimer
+X-KDE-Submenu[pa]=ਕੰਪਰੈੱਸ
+X-KDE-Submenu[pl]=Kompresuj
+X-KDE-Submenu[pt]=Comprimir
+X-KDE-Submenu[pt_BR]=Compactar
+X-KDE-Submenu[ro]=Comprimă
+X-KDE-Submenu[ru]=Упаковать
+X-KDE-Submenu[sk]=Komprimovať
+X-KDE-Submenu[sl]=Stisni
+X-KDE-Submenu[sr]=Компресуј
+X-KDE-Submenu[sr@ijekavian]=Компресуј
+X-KDE-Submenu[sr@ijekavianlatin]=Kompresuj
+X-KDE-Submenu[sr@latin]=Kompresuj
+X-KDE-Submenu[sv]=Compress
+X-KDE-Submenu[th]=บีบข้อมูล
+X-KDE-Submenu[tr]=Sıkıştır
+X-KDE-Submenu[uk]=Стиснути
+X-KDE-Submenu[x-test]=xxCompressxx
+X-KDE-Submenu[zh_CN]=压缩
+X-KDE-Submenu[zh_TW]=壓縮
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+TryExec=lrzip
+
+[Desktop Action addToLrzip]
+Name=As LRZIP Archive
+Name[ar]=كأرشيف LRZIP
+Name[ca]=Com a arxiu LRZIP
+Name[ca@valencia]=Com a arxiu LRZIP
+Name[cs]=Jako LRZIP archív
+Name[da]=Som LRZIP-arkiv
+Name[de]=Als LRZIP-Archiv
+Name[en_GB]=As LRZIP Archive
+Name[es]=Como archivo comprimido LRZIP
+Name[et]=LRZIP-arhiivina
+Name[eu]=LRZIP artxiboa gisa
+Name[fi]=Lrzip-arkistoksi
+Name[fr]=En tant qu'archive LRZIP
+Name[gl]=Como arquivo LRZIP
+Name[hr]=Kao LRZIP-arhiva
+Name[hu]=LRZIP archívumként
+Name[it]=Come archivio LRZIP
+Name[ja]=LRZIP アーカイブに
+Name[km]=​ជា​ប័ណ្ណសារ LRZIP
+Name[lt]=LRZIP archyvas
+Name[lv]=Kā LRZIP arhīvu
+Name[nb]=Som LRZIP-arkiv
+Name[nds]=As Lrzip-Archiev
+Name[nl]=Als LRZIP-archief
+Name[nn]=Som LRZIP-arkiv
+Name[pa]=LRZIP ਅਕਾਇਵ ਵਾਂਗ
+Name[pl]=Jako archiwum LRZIP
+Name[pt]=Como Pacote LRZIP
+Name[pt_BR]=Como arquivo LRZIP
+Name[ro]=Ca arhivă LRZIP
+Name[ru]=Как архив LRZIP
+Name[sk]=Do LRZIP archívu
+Name[sl]=Kot arhiv LRZIP
+Name[sr]=као ЛРЗИП архиву
+Name[sr@ijekavian]=као ЛРЗИП архиву
+Name[sr@ijekavianlatin]=kao LRZIP arhivu
+Name[sr@latin]=kao LRZIP arhivu
+Name[sv]=Som LRZIP-arkiv
+Name[tr]=LRZIP Arşivi Olarak
+Name[uk]=Як архів LRZIP
+Name[x-test]=xxAs LRZIP Archivexx
+Name[zh_CN]=为 LRZIP 归档
+Name[zh_TW]=成 LRZIP 壓縮檔
+Icon=application-x-gzip
+Exec=kompr=`kdialog --menu "2nd level compression:" n "none" l "lzo" v "lzma" g "gzip" b "bzip2" z "zpaq" --default "lzma" --geometry 50x160`; if [ "$kompr" = "" ]; then exit 0; fi && out=`lrzip -L 9 -$kompr %U 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=kompr=`kdialog --menu "Компресија другог нивоа:" n "без компресије" l "lzo" v "lzma" g "gzip" b "bzip2" z "zpaq" --default "lzma" --geometry 50x160`; if [ "$kompr" = "" ]; then exit 0; fi && out=`lrzip -L 9 -$kompr %U 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

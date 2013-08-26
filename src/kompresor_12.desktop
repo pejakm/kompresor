@@ -1,0 +1,111 @@
+### Kompresor v0.1;
+# KDE4 service menu
+# arj compressing
+# GPLv3
+# © Mladen Pejaković <pejakm@cryptolab.net>, 2013.
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;
+Actions=addToArj;
+X-KDE-Submenu=Compress
+X-KDE-Submenu[ar]=اضغط
+X-KDE-Submenu[bg]=Компресиране
+X-KDE-Submenu[ca]=Compressió
+X-KDE-Submenu[ca@valencia]=Compressió
+X-KDE-Submenu[cs]=Zkomprimovat
+X-KDE-Submenu[da]=Komprimér
+X-KDE-Submenu[de]=Komprimieren
+X-KDE-Submenu[el]=Συμπίεση
+X-KDE-Submenu[en_GB]=Compress
+X-KDE-Submenu[es]=Comprimir
+X-KDE-Submenu[et]=Paki
+X-KDE-Submenu[eu]=Konprimatu
+X-KDE-Submenu[fi]=Tiivistä
+X-KDE-Submenu[fr]=Compresser
+X-KDE-Submenu[ga]=Comhbhrúigh
+X-KDE-Submenu[gl]=Comprimir
+X-KDE-Submenu[hne]=संपीडित करव
+X-KDE-Submenu[hr]=Zapakiraj
+X-KDE-Submenu[hu]=Tömörítés
+X-KDE-Submenu[it]=Comprimi
+X-KDE-Submenu[ja]=圧縮
+X-KDE-Submenu[km]=បង្ហាប់
+X-KDE-Submenu[ko]=압축하기
+X-KDE-Submenu[lt]=Suspausti
+X-KDE-Submenu[lv]=Saspiest
+X-KDE-Submenu[nb]=Komprimer
+X-KDE-Submenu[nds]=Komprimeren
+X-KDE-Submenu[nl]=Comprimeren
+X-KDE-Submenu[nn]=Komprimer
+X-KDE-Submenu[pa]=ਕੰਪਰੈੱਸ
+X-KDE-Submenu[pl]=Kompresuj
+X-KDE-Submenu[pt]=Comprimir
+X-KDE-Submenu[pt_BR]=Compactar
+X-KDE-Submenu[ro]=Comprimă
+X-KDE-Submenu[ru]=Упаковать
+X-KDE-Submenu[sk]=Komprimovať
+X-KDE-Submenu[sl]=Stisni
+X-KDE-Submenu[sr]=Компресуј
+X-KDE-Submenu[sr@ijekavian]=Компресуј
+X-KDE-Submenu[sr@ijekavianlatin]=Kompresuj
+X-KDE-Submenu[sr@latin]=Kompresuj
+X-KDE-Submenu[sv]=Compress
+X-KDE-Submenu[th]=บีบข้อมูล
+X-KDE-Submenu[tr]=Sıkıştır
+X-KDE-Submenu[uk]=Стиснути
+X-KDE-Submenu[x-test]=xxCompressxx
+X-KDE-Submenu[zh_CN]=压缩
+X-KDE-Submenu[zh_TW]=壓縮
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+TryExec=arj
+
+[Desktop Action addToArj]
+Name=As ARJ Archive
+Name[ar]=ك أرشيف ARJ
+Name[ca]=Com a arxiu ARJ
+Name[ca@valencia]=Com a arxiu ARJ
+Name[cs]=Jako ARJ archív
+Name[da]=Som ARJ-arkiv
+Name[de]=Als ARJ-Archiv
+Name[en_GB]=As ARJ Archive
+Name[es]=Como archivo comprimido ARJ
+Name[et]=ARJ-arhiivina
+Name[eu]=ARJ artxibo gisa
+Name[fi]=Arj-arkistoksi
+Name[fr]=En tant qu'archive ARJ
+Name[gl]=Como arquivo ARJ
+Name[hr]=Kao ARJ-arhiva
+Name[hu]=ARJ archívumként
+Name[it]=Come archivio ARJ
+Name[ja]=ARJ アーカイブに
+Name[km]=ជា​ប័ណ្ណសារ ARJ
+Name[lt]=ARJ archyvas
+Name[lv]=Kā ARJ arhīvu
+Name[nb]=Som ARJ-arkiv
+Name[nds]=As Arj-Archiev
+Name[nl]=Als ARJ-archief
+Name[nn]=Som ARJ-arkiv
+Name[pa]=ਜ਼ਿਪ ਅਕਾਇਵ ਵਾਂਗ
+Name[pl]=Jako archiwum ARJ
+Name[pt]=Como Pacote ARJ
+Name[pt_BR]=Como arquivo ARJ
+Name[ro]=Ca arhivă ARJ
+Name[ru]=Как архив ARJ
+Name[sk]=Do ARJ archívu
+Name[sl]=Kot arhiv ARJ
+Name[sr]=као АРJ архиву
+Name[sr@ijekavian]=као АРJ архиву
+Name[sr@ijekavianlatin]=kao ARJ arhivu
+Name[sr@latin]=kao ARJ arhivu
+Name[sv]=Som ARJ-arkiv
+Name[tr]=ARJ Arşivi Olarak
+Name[uk]=Як архів ARJ
+Name[x-test]=xxAs ARJ Archivexx
+Name[zh_CN]=为 ARJ 归档
+Name[zh_TW]=成 ARJ 壓縮檔
+Icon=application-x-arj
+Exec=out=`cd %D && arj a archive.arj %N 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && arj a arhiva.arj %N 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

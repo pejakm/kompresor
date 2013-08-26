@@ -1,0 +1,111 @@
+### Kompresor v0.1;
+# KDE4 service menu
+# zzip compressing
+# GPLv3
+# © Mladen Pejaković <pejakm@cryptolab.net>, 2013.
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;
+Actions=addToZzip;
+X-KDE-Submenu=Compress
+X-KDE-Submenu[ar]=اضغط
+X-KDE-Submenu[bg]=Компресиране
+X-KDE-Submenu[ca]=Compressió
+X-KDE-Submenu[ca@valencia]=Compressió
+X-KDE-Submenu[cs]=Zkomprimovat
+X-KDE-Submenu[da]=Komprimér
+X-KDE-Submenu[de]=Komprimieren
+X-KDE-Submenu[el]=Συμπίεση
+X-KDE-Submenu[en_GB]=Compress
+X-KDE-Submenu[es]=Comprimir
+X-KDE-Submenu[et]=Paki
+X-KDE-Submenu[eu]=Konprimatu
+X-KDE-Submenu[fi]=Tiivistä
+X-KDE-Submenu[fr]=Compresser
+X-KDE-Submenu[ga]=Comhbhrúigh
+X-KDE-Submenu[gl]=Comprimir
+X-KDE-Submenu[hne]=संपीडित करव
+X-KDE-Submenu[hr]=Zapakiraj
+X-KDE-Submenu[hu]=Tömörítés
+X-KDE-Submenu[it]=Comprimi
+X-KDE-Submenu[ja]=圧縮
+X-KDE-Submenu[km]=បង្ហាប់
+X-KDE-Submenu[ko]=압축하기
+X-KDE-Submenu[lt]=Suspausti
+X-KDE-Submenu[lv]=Saspiest
+X-KDE-Submenu[nb]=Komprimer
+X-KDE-Submenu[nds]=Komprimeren
+X-KDE-Submenu[nl]=Comprimeren
+X-KDE-Submenu[nn]=Komprimer
+X-KDE-Submenu[pa]=ਕੰਪਰੈੱਸ
+X-KDE-Submenu[pl]=Kompresuj
+X-KDE-Submenu[pt]=Comprimir
+X-KDE-Submenu[pt_BR]=Compactar
+X-KDE-Submenu[ro]=Comprimă
+X-KDE-Submenu[ru]=Упаковать
+X-KDE-Submenu[sk]=Komprimovať
+X-KDE-Submenu[sl]=Stisni
+X-KDE-Submenu[sr]=Компресуј
+X-KDE-Submenu[sr@ijekavian]=Компресуј
+X-KDE-Submenu[sr@ijekavianlatin]=Kompresuj
+X-KDE-Submenu[sr@latin]=Kompresuj
+X-KDE-Submenu[sv]=Compress
+X-KDE-Submenu[th]=บีบข้อมูล
+X-KDE-Submenu[tr]=Sıkıştır
+X-KDE-Submenu[uk]=Стиснути
+X-KDE-Submenu[x-test]=xxCompressxx
+X-KDE-Submenu[zh_CN]=压缩
+X-KDE-Submenu[zh_TW]=壓縮
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+TryExec=zzip
+
+[Desktop Action addToZzip]
+Name=As ZZIP Archive
+Name[ar]=ك أرشيف ZZIP
+Name[ca]=Com a arxiu ZZIP
+Name[ca@valencia]=Com a arxiu ZZIP
+Name[cs]=Jako ZZIP archív
+Name[da]=Som ZZIP-arkiv
+Name[de]=Als ZZIP-Archiv
+Name[en_GB]=As ZZIP Archive
+Name[es]=Como archivo comprimido ZZIP
+Name[et]=ZZIP-arhiivina
+Name[eu]=ZZIP artxibo gisa
+Name[fi]=Zzip-arkistoksi
+Name[fr]=En tant qu'archive ZZIP
+Name[gl]=Como arquivo ZZIP
+Name[hr]=Kao ZZIP-arhiva
+Name[hu]=ZZIP archívumként
+Name[it]=Come archivio ZZIP
+Name[ja]=ZZIP アーカイブに
+Name[km]=ជា​ប័ណ្ណសារ ZZIP
+Name[lt]=ZZIP archyvas
+Name[lv]=Kā ZZIP arhīvu
+Name[nb]=Som ZZIP-arkiv
+Name[nds]=As Zzip-Archiev
+Name[nl]=Als ZZIP-archief
+Name[nn]=Som ZZIP-arkiv
+Name[pa]=ਜ਼ਿਪ ਅਕਾਇਵ ਵਾਂਗ
+Name[pl]=Jako archiwum ZZIP
+Name[pt]=Como Pacote ZZIP
+Name[pt_BR]=Como arquivo ZZIP
+Name[ro]=Ca arhivă ZZIP
+Name[ru]=Как архив ZZIP
+Name[sk]=Do ZZIP archívu
+Name[sl]=Kot arhiv ZZIP
+Name[sr]=као ЗЗИП архиву
+Name[sr@ijekavian]=као ЗЗИП архиву
+Name[sr@ijekavianlatin]=kao ZZIP arhivu
+Name[sr@latin]=kao ZZIP arhivu
+Name[sv]=Som ZZIP-arkiv
+Name[tr]=ZZIP Arşivi Olarak
+Name[uk]=Як архів ZZIP
+Name[x-test]=xxAs ZZIP Archivexx
+Name[zh_CN]=为 ZZIP 归档
+Name[zh_TW]=成 ZZIP 壓縮檔
+Icon=application-zip
+Exec=out=`cd %D && zzip a -mx -r archive.zz %N 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && zzip a -mx -r arhiva.zz %N 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
