@@ -1,4 +1,4 @@
-kompresor
+Kompresor
 =========
 
 A collection of KDE4 service menu files for making archives/compressing files easier.
@@ -60,8 +60,8 @@ Details
 
 **Dependencies**
 
-KDE SC4, Dolphin or Konqueror.
-bsdtar, bsdcpio, gzip, bzip, xz are found as common programs on most distros.
+KDE SC4, Dolphin or Konqueror, kdialog.
+`bsdtar`, `bsdcpio`, `gzip`, `bzip`, `xz` are found as common programs on most distros.
 Check above what do you need for all service menus to be displayed and usable.
 
 Current version
