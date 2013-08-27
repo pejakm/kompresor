@@ -1,0 +1,38 @@
+# $Id$
+# Maintainer: Mladen Pejaković <pejakm@autistici.org>
+
+pkgname=kompresor
+pkgver=0.1
+pkgrel=1
+arch=('any')
+url='https://github.com/pejakm/kompresor'
+pkgdesc='A collection of KDE4 service menu files for making archives/compressing files easier'
+license=('GPL3')
+depends=('kdebase-workspace' 'kdebase-kdialog' 'libarchive')
+optdepends=('arc: for arc archives'
+            'arj: for arj archives'
+            'balz: for balz archives'
+            'fastjar: for jar archives'
+            'gzip: for gz archives'
+            'lrzip: for lrz archives'
+            'lzip: for lz archives'
+            'quad: for quad archives'
+            'rar: for rar archives'
+            'rzip: for rz archives'
+            'xar: for xar archives'
+            'zip: for zip archives'
+            'zoo: for zoo archives'
+            'zzip: for zz archives'
+            'bin32-lha: for lha archives')
+source=("https://github.com/pejakm/${pkgname}/archive/v${pkgver}.zip")
+sha1sums=('e2379c2e7ae1c971f50c852fd5457d9d85d0aa71')
+
+# build() {
+# }
+
+package() {
+  cd ${srcdir}/${pkgname}-${pkgver}
+  install -m755 -d ${pkgdir}/usr/share/{licenses/kompresor,kde4/services/ServiceMenus}
+  install -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/"
+  install -D -m644 src/*.desktop "$pkgdir/usr/share/kde4/services/ServiceMenus/"
+}

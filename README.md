@@ -54,7 +54,7 @@ Details
  * .jar		(`fastjar`)
  * .xar		(`xar`)
  * .zoo		(`zoo`)
- * .zzip	(`zzip`)
+ * .zz		(`zzip`)
  * .quad	(`quad`)
  * .balz	(`balz`)
  * .rz		(`rzip`)
