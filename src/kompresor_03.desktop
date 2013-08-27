@@ -107,5 +107,5 @@ Name[x-test]=xxAs XZ Archivexx
 Name[zh_CN]=为 XZ 归档
 Name[zh_TW]=成 XZ 壓縮檔
 Icon=application-x-bzip
-Exec=out=`xz -zk9 %U 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`xz -zk9 %U 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`xz -zk9 %U 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`xz -zk9 %U 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

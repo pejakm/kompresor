@@ -107,5 +107,5 @@ Name[x-test]=xxAs ARJ Archivexx
 Name[zh_CN]=为 ARJ 归档
 Name[zh_TW]=成 ARJ 壓縮檔
 Icon=application-x-arj
-Exec=out=`cd %D && arj a archive.arj %N 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && arj a arhiva.arj %N 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && arj a archive.arj %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && arj a arhiva.arj %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

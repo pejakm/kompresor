@@ -107,5 +107,5 @@ Name[x-test]=xxAs LRZIP Archivexx
 Name[zh_CN]=为 LRZIP 归档
 Name[zh_TW]=成 LRZIP 壓縮檔
 Icon=application-x-gzip
-Exec=kompr=`kdialog --menu "2nd level compression:" n "none" l "lzo" v "lzma" g "gzip" b "bzip2" z "zpaq" --default "lzma" --geometry 50x160`; if [ "$kompr" = "" ]; then exit 0; fi && out=`lrzip -L 9 -$kompr %U 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=kompr=`kdialog --menu "Компресија другог нивоа:" n "без компресије" l "lzo" v "lzma" g "gzip" b "bzip2" z "zpaq" --default "lzma" --geometry 50x160`; if [ "$kompr" = "" ]; then exit 0; fi && out=`lrzip -L 9 -$kompr %U 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
+Exec=kompr=`kdialog --menu "2nd level compression:" n "none" l "lzo" v "lzma" g "gzip" b "bzip2" z "zpaq" --default "lzma" --geometry 50x160`; if [ "$kompr" = "" ]; then exit 0; fi && out=`lrzip -L 9 -$kompr %U 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=kompr=`kdialog --menu "Компресија другог нивоа:" n "без компресије" l "lzo" v "lzma" g "gzip" b "bzip2" z "zpaq" --default "lzma" --geometry 50x160`; if [ "$kompr" = "" ]; then exit 0; fi && out=`lrzip -L 9 -$kompr %U 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

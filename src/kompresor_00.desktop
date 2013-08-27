@@ -106,8 +106,8 @@ Name[x-test]=xxAs ZIP Archivexx
 Name[zh_CN]=为 ZIP 归档
 Name[zh_TW]=成 ZIP 壓縮檔
 Icon=application-zip
-Exec=out=`cd %D && bsdtar -acf archive.zip %N 2>&1` && kdialog --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.zip %N 2>&1` && kdialog --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && bsdtar -acf archive.zip %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.zip %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addTo7Z]
 Name=As 7Z Archive
@@ -154,8 +154,8 @@ Name[x-test]=xxAs 7Z Archivexx
 Name[zh_CN]=为 7Z 归档
 Name[zh_TW]=成 7Z 壓縮檔
 Icon=application-x-7z-compressed
-Exec=out=`cd %D && bsdtar -acf archive.z7 %N 2>&1` && kdialog --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.z7 %N 2>&1` && kdialog --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && bsdtar -acf archive.z7 %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.z7 %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addToCpio]
 Name=As CPIO Archive
@@ -202,8 +202,8 @@ Name[x-test]=xxAs CPIO Archivexx
 Name[zh_CN]=为 CPIO 归档
 Name[zh_TW]=成 CPIO 壓縮檔
 Icon=application-x-cpio
-Exec=out=`cd %D && bsdtar -acf archive.cpio %N 2>&1` && kdialog --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.cpio %N 2>&1` && kdialog --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && bsdtar -acf archive.cpio %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.cpio %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addToAr]
 MimeType=all/allfiles;
@@ -251,8 +251,8 @@ Name[x-test]=xxAs AR Archivexx
 Name[zh_CN]=为 AR 归档
 Name[zh_TW]=成 AR 壓縮檔
 Icon=application-x-ar
-Exec=out=`cd %D && bsdtar -acf archive.ar %N 2>&1` && kdialog --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.ar %N 2>&1` && kdialog --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && bsdtar -acf archive.ar %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.ar %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addToShar]
 MimeType=all/allfiles;
@@ -300,8 +300,8 @@ Name[x-test]=xxAs SHAR Archivexx
 Name[zh_CN]=为 SHAR 归档
 Name[zh_TW]=成 SHAR 壓縮檔
 Icon=application-x-shar
-Exec=out=`cd %D && bsdtar -acf archive.shar %N 2>&1` && kdialog --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.shar %N 2>&1` && kdialog --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && bsdtar -acf archive.shar %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.shar %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addToTar]
 Name=As TAR...
@@ -338,8 +338,8 @@ Name[tr]=TAR Olarak...
 Name[uk]=Як TAR...
 Name[x-test]=xxAs TAR...xx
 Icon=application-x-tar
-Exec=nast=`kdialog --menu "Compression:" tar "none" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf archive.$nast %N 2>&1` && kdialog --passivepopup "Done adding '%N' to the archive.$nast!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=nast=`kdialog --menu "Компресија:" tar "без" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf arhiva.$nast %N 2>&1` && kdialog --passivepopup "Паковање '%N' у arhiva.$nast је завршено!" || kdialog --error "Грешка:\n$out"
+Exec=nast=`kdialog --menu "Compression:" tar "none" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf archive.$nast %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.$nast!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=nast=`kdialog --menu "Компресија:" tar "без" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf arhiva.$nast %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.$nast је завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addToTarN]
 Name=As TAR Archive
@@ -384,8 +384,8 @@ Name[uk]=Як архів TAR
 Name[x-test]=xxAs TAR Archivexx
 Name[zh_CN]=为 TAR 归档
 Icon=application-x-tar
-Exec=ime=`kdialog --inputbox "Name:" "%N"`; if [ "$ime" = "" ]; then exit 0; fi && nast=`kdialog --menu "Compression:" tar "none" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf "$ime.$nast" %N 2>&1` && kdialog --passivepopup "Done adding '%N' to the $ime.$nast!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=ime=`kdialog --inputbox "Назив:" "%N"`; if [ "$ime" = "" ]; then exit 0; fi && nast=`kdialog --menu "Компресија:" tar "без" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf "$ime.$nast" %N 2>&1` && kdialog --passivepopup "Паковање '%N' у $ime.$nast је завршено!" || kdialog --error "Грешка:\n$out"
+Exec=ime=`kdialog --inputbox "Name:" "%N"`; if [ "$ime" = "" ]; then exit 0; fi && nast=`kdialog --menu "Compression:" tar "none" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf "$ime.$nast" %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the $ime.$nast!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=ime=`kdialog --inputbox "Назив:" "%N"`; if [ "$ime" = "" ]; then exit 0; fi && nast=`kdialog --menu "Компресија:" tar "без" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf "$ime.$nast" %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у $ime.$nast је завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addTo]
 Name=To...
@@ -432,5 +432,5 @@ Name[x-test]=xxCompress To...xx
 Name[zh_CN]=压缩到...
 Name[zh_TW]=壓縮為...
 Icon=application-x-tar
-Exec=nast=`kdialog --menu "Compression:" tar "none" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && ime=`kdialog --getsavefilename "%D/archive" $nast`; if [ "$ime" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf $ime.$nast %N 2>&1` && kdialog --passivepopup "Done adding '%N' to the $ime.$nast!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=nast=`kdialog --menu "Компресија:" tar "без" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && ime=`kdialog --getsavefilename "%D/arhiva" $nast`; if [ "$ime" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf $ime.$nast %N 2>&1` && kdialog --passivepopup "Паковање '%N' у $ime.$nast је завршено!" || kdialog --error "Грешка:\n$out"
+Exec=nast=`kdialog --menu "Compression:" tar "none" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && ime=`kdialog --getsavefilename "%D/archive" $nast`; if [ "$ime" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf $ime.$nast %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the $ime.$nast!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=nast=`kdialog --menu "Компресија:" tar "без" tar.Z "Z" tar.gz "gzip" tar.bz2 "bzip2" tar.xz "xz" tar.lzma "lzma" tar.lz "lzip" tar.lrz "lrzip" tar.lzo "lzop" --default "gzip" --geometry 50x210`; if [ "$nast" = "" ]; then exit 0; fi && ime=`kdialog --getsavefilename "%D/arhiva" $nast`; if [ "$ime" = "" ]; then exit 0; fi && out=`cd %D && bsdtar -caf $ime.$nast %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у $ime.$nast је завршено!" || kdialog --error "Грешка:\n$out"

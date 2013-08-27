@@ -107,5 +107,5 @@ Name[x-test]=xxAs ZZIP Archivexx
 Name[zh_CN]=为 ZZIP 归档
 Name[zh_TW]=成 ZZIP 壓縮檔
 Icon=application-zip
-Exec=out=`cd %D && zzip a -mx -r archive.zz %N 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && zzip a -mx -r arhiva.zz %N 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && zzip a -mx -r archive.zz %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && zzip a -mx -r arhiva.zz %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

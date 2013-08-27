@@ -107,5 +107,5 @@ Name[x-test]=xxAs GZIP Archivexx
 Name[zh_CN]=为 GZIP 归档
 Name[zh_TW]=成 GZIP 壓縮檔
 Icon=application-x-gzip
-Exec=out=`gzip -9N -c %u > %u.gz 2>&1` && kdialog --passivepopup "Done compressing '%u'!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`gzip -9N -c %u > %u.gz 2>&1` && kdialog --passivepopup "Паковање '%u' завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`gzip -9N -c %u > %u.gz 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%u'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`gzip -9N -c %u > %u.gz 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%u' завршено!" || kdialog --error "Грешка:\n$out"

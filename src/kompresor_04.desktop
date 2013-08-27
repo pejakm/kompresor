@@ -107,5 +107,5 @@ Name[x-test]=xxAs LZMA Archivexx
 Name[zh_CN]=为 LZMA 归档
 Name[zh_TW]=成 LZMA 壓縮檔
 Icon=application-x-bzip
-Exec=out=`lzma -zk9 %U 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`lzma -zk9 %U 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`lzma -zk9 %U 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`lzma -zk9 %U 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

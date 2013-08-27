@@ -108,5 +108,5 @@ Name[x-test]=xxAs ARC Archivexx
 Name[zh_CN]=为 ARC 归档
 Name[zh_TW]=成 ARC 壓縮檔
 Icon=application-x-arc
-Exec=out=`cd %D && arc a archive.arc %N 2>&1` && kdialog --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && arc a arhiva.arc %N 2>&1` && kdialog --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && arc a archive.arc %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && arc a arhiva.arc %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
