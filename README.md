@@ -57,6 +57,7 @@ Details
  * .zzip	(`zzip`)
  * .quad	(`quad`)
  * .balz	(`balz`)
+ * .rz		(`rzip`)
 
 **Dependencies**
 
