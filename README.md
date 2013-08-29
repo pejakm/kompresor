@@ -70,7 +70,9 @@ Current version
 
 The current stable version of Kompresor service menus is 0.1
 
-FAQ and Changelog
+Changelog and Bug reporting
 ----------------------------------------------------------------------------------------
 
 If you are experiencing some sort of problem, please open an issue.
+
+[Changelog](https://github.com/pejakm/kompresor/blob/master/ChangeLog)
