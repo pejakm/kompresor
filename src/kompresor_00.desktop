@@ -154,8 +154,8 @@ Name[x-test]=xxAs 7Z Archivexx
 Name[zh_CN]=为 7Z 归档
 Name[zh_TW]=成 7Z 壓縮檔
 Icon=application-x-7z-compressed
-Exec=out=`cd %D && bsdtar -acf archive.z7 %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.z7 %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && bsdtar -acf archive.z7 %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.7z!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.z7 %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.7z завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addToCpio]
 Name=As CPIO Archive
@@ -202,8 +202,8 @@ Name[x-test]=xxAs CPIO Archivexx
 Name[zh_CN]=为 CPIO 归档
 Name[zh_TW]=成 CPIO 壓縮檔
 Icon=application-x-cpio
-Exec=out=`cd %D && bsdtar -acf archive.cpio %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.cpio %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
+Exec=frmt=`kdialog --menu "Format:" ustar "ustar - POSIX.1 tar" pax "pax - POSIX.1 pax" odc "odc - old POSIX.1 portable" newc "newc - SVR4 portable" --default "newc - SVR4 portable" --geometry 100x100`; if [ "$frmt" = "" ]; then exit 0; fi && cmpr=`kdialog --menu "Compression:" none "none" J "xz" z "gzip" y "bzip2" Z "compress" lzma "lzma" lzop "lzop" lrzip "lrzip" --default "none" --geometry 100x190`; if [ "$cmpr" = "" ]; then exit 0; elif [ "$cmpr" = "none" ]; then cmprs=""; elif [ "$cmpr" = "lzma" ] || [ "$cmpr" = "lzop" ] || [ "$cmpr" = "lrzip" ]; then cmprs="--$cmpr"; else cmprs="-$cmpr"; fi && out=`cd %D && find %N -print | bsdcpio -o $cmprs -H $frmt >archive.cpio %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.cpio!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=frmt=`kdialog --menu "Формат:" ustar "ustar - POSIX.1 tar" pax "pax - POSIX.1 pax" odc "odc - old POSIX.1 portable" newc "newc - SVR4 portable" --default "newc - SVR4 portable" --geometry 100x100`; if [ "$frmt" = "" ]; then exit 0; fi && cmpr=`kdialog --menu "Компресија:" none "без" J "xz" z "gzip" y "bzip2" Z "compress" lzma "lzma" lzop "lzop" lrzip "lrzip" --default "без" --geometry 100x190`; if [ "$cmpr" = "" ]; then exit 0; elif [ "$cmpr" = "none" ]; then cmprs=""; elif [ "$cmpr" = "lzma" ] || [ "$cmpr" = "lzop" ] || [ "$cmpr" = "lrzip" ]; then cmprs="--$cmpr"; else cmprs="-$cmpr"; fi && out=`cd %D && find %N -print | bsdcpio -o $cmprs -H $frmt >arhiva.cpio %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.cpio завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addToAr]
 MimeType=all/allfiles;
@@ -251,8 +251,8 @@ Name[x-test]=xxAs AR Archivexx
 Name[zh_CN]=为 AR 归档
 Name[zh_TW]=成 AR 壓縮檔
 Icon=application-x-ar
-Exec=out=`cd %D && bsdtar -acf archive.ar %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.ar %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && bsdtar -acf archive.ar %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.ar!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.ar %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.ar завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addToShar]
 MimeType=all/allfiles;
@@ -300,8 +300,8 @@ Name[x-test]=xxAs SHAR Archivexx
 Name[zh_CN]=为 SHAR 归档
 Name[zh_TW]=成 SHAR 壓縮檔
 Icon=application-x-shar
-Exec=out=`cd %D && bsdtar -acf archive.shar %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.zip!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.shar %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.zip завршено!" || kdialog --error "Грешка:\n$out"
+Exec=out=`cd %D && bsdtar -acf archive.shar %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done adding '%N' to the archive.shar!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=out=`cd %D && bsdtar -acf arhiva.shar %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' у arhiva.shar завршено!" || kdialog --error "Грешка:\n$out"
 
 [Desktop Action addToTar]
 Name=As TAR...

@@ -1,0 +1,11 @@
+Version 0.1.1 (not released yet)
+    * improvements to cpio and xar
+    * Arch Linux PKGBUILD
+
+Version 0.1
+    * added rzip service menu
+    * improvements to rar
+    * fixes to zip
+
+Version 0.x.x
+    * Initial upload

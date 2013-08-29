@@ -37,7 +37,7 @@ Details
  * .zip		(simple, using `bsdtar`)
  * .zip		(advanced, requires `zip`)
  * .7z		(`bsdtar`)
- * .cpio	(`bsdtar`)
+ * .cpio	(`bsdtar`, requires `lrzip` also)
  * .ar		(`bsdtar`)
  * .shar	(`bsdtar`)
  * .gz		(`gzip`)

@@ -107,5 +107,5 @@ Name[x-test]=xxAs XAR Archivexx
 Name[zh_CN]=为 XAR 归档
 Name[zh_TW]=成 XAR 壓縮檔
 Icon=application-zip
-Exec=out=`cd %D && xar -cf archive.xar %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
-Exec[sr@ijekavian]=out=`cd %D && xar -cf arhiva.xar %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
+Exec=cmpr=`kdialog --menu "Compression:" none "none" gzip "gzip" bzip2 "bzip2" --default "gzip" --geometry 50x100`; if [ "$cmpr" = "" ]; then exit 0; fi && out=`cd %D && xar -c --compression $cmpr -f archive.xar %N 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=cmpr=`kdialog --menu "Компресија:" none "без" gzip "gzip" bzip2 "bzip2" --default "gzip" --geometry 50x100`; if [ "$cmpr" = "" ]; then exit 0; fi && out=`cd %D && xar -c --compression $cmpr -f arhiva.xar %N 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"
