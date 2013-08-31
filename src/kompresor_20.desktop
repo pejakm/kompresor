@@ -1,0 +1,111 @@
+### Kompresor v0.1.1;
+# KDE4 service menu
+# lz4 compressing
+# GPLv3
+# © Mladen Pejaković <pejakm@cryptolab.net>, 2013.
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+Actions=addToLz4;
+X-KDE-Submenu=Compress
+X-KDE-Submenu[ar]=اضغط
+X-KDE-Submenu[bg]=Компресиране
+X-KDE-Submenu[ca]=Compressió
+X-KDE-Submenu[ca@valencia]=Compressió
+X-KDE-Submenu[cs]=Zkomprimovat
+X-KDE-Submenu[da]=Komprimér
+X-KDE-Submenu[de]=Komprimieren
+X-KDE-Submenu[el]=Συμπίεση
+X-KDE-Submenu[en_GB]=Compress
+X-KDE-Submenu[es]=Comprimir
+X-KDE-Submenu[et]=Paki
+X-KDE-Submenu[eu]=Konprimatu
+X-KDE-Submenu[fi]=Tiivistä
+X-KDE-Submenu[fr]=Compresser
+X-KDE-Submenu[ga]=Comhbhrúigh
+X-KDE-Submenu[gl]=Comprimir
+X-KDE-Submenu[hne]=संपीडित करव
+X-KDE-Submenu[hr]=Zapakiraj
+X-KDE-Submenu[hu]=Tömörítés
+X-KDE-Submenu[it]=Comprimi
+X-KDE-Submenu[ja]=圧縮
+X-KDE-Submenu[km]=បង្ហាប់
+X-KDE-Submenu[ko]=압축하기
+X-KDE-Submenu[lt]=Suspausti
+X-KDE-Submenu[lv]=Saspiest
+X-KDE-Submenu[nb]=Komprimer
+X-KDE-Submenu[nds]=Komprimeren
+X-KDE-Submenu[nl]=Comprimeren
+X-KDE-Submenu[nn]=Komprimer
+X-KDE-Submenu[pa]=ਕੰਪਰੈੱਸ
+X-KDE-Submenu[pl]=Kompresuj
+X-KDE-Submenu[pt]=Comprimir
+X-KDE-Submenu[pt_BR]=Compactar
+X-KDE-Submenu[ro]=Comprimă
+X-KDE-Submenu[ru]=Упаковать
+X-KDE-Submenu[sk]=Komprimovať
+X-KDE-Submenu[sl]=Stisni
+X-KDE-Submenu[sr]=Компресуј
+X-KDE-Submenu[sr@ijekavian]=Компресуј
+X-KDE-Submenu[sr@ijekavianlatin]=Kompresuj
+X-KDE-Submenu[sr@latin]=Kompresuj
+X-KDE-Submenu[sv]=Compress
+X-KDE-Submenu[th]=บีบข้อมูล
+X-KDE-Submenu[tr]=Sıkıştır
+X-KDE-Submenu[uk]=Стиснути
+X-KDE-Submenu[x-test]=xxCompressxx
+X-KDE-Submenu[zh_CN]=压缩
+X-KDE-Submenu[zh_TW]=壓縮
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+TryExec=lz4c
+
+[Desktop Action addToLz4]
+Name=As LZ4 Archive
+Name[ar]=ك أرشيف LZ4
+Name[ca]=Com a arxiu LZ4
+Name[ca@valencia]=Com a arxiu LZ4
+Name[cs]=Jako LZ4 archív
+Name[da]=Som LZ4-arkiv
+Name[de]=Als LZ4-Archiv
+Name[en_GB]=As LZ4 Archive
+Name[es]=Como archivo comprimido LZ4
+Name[et]=LZ4-arhiivina
+Name[eu]=LZ4 artxibo gisa
+Name[fi]=LZ4-arkistoksi
+Name[fr]=En tant qu'archive LZ4
+Name[gl]=Como arquivo LZ4
+Name[hr]=Kao LZ4-arhiva
+Name[hu]=LZ4 archívumként
+Name[it]=Come archivio LZ4
+Name[ja]=LZ4 アーカイブに
+Name[km]=ជា​ប័ណ្ណសារ LZ4
+Name[lt]=LZ4 archyvas
+Name[lv]=Kā LZ4 arhīvu
+Name[nb]=Som LZ4-arkiv
+Name[nds]=As Lz4-Archiev
+Name[nl]=Als LZ4-archief
+Name[nn]=Som LZ4-arkiv
+Name[pa]=ਜ਼ਿਪ ਅਕਾਇਵ ਵਾਂਗ
+Name[pl]=Jako archiwum LZ4
+Name[pt]=Como Pacote LZ4
+Name[pt_BR]=Como arquivo LZ4
+Name[ro]=Ca arhivă LZ4
+Name[ru]=Как архив LZ4
+Name[sk]=Do LZ4 archívu
+Name[sl]=Kot arhiv LZ4
+Name[sr]=као ЛЗ4 архиву
+Name[sr@ijekavian]=као ЛЗ4 архиву
+Name[sr@ijekavianlatin]=kao LZ4 arhivu
+Name[sr@latin]=kao LZ4 arhivu
+Name[sv]=Som LZ4-arkiv
+Name[tr]=LZ4 Arşivi Olarak
+Name[uk]=Як архів LZ4
+Name[x-test]=xxAs LZ4 Archivexx
+Name[zh_CN]=为 LZ4 归档
+Name[zh_TW]=成 LZ4 壓縮檔
+Icon=application-x-lzop
+Exec=cmpr=`kdialog --menu "Compression:" c "fast" hc "high" --default "fast" --geometry 40x50`; if [ "$cmpr" = "" ]; then exit 0; fi && out=`cd %d && lz4c -y -$cmpr "%N" "%N.lz4" 2>&1` && kdialog --title "Kompresor" --passivepopup "Done compressing '%N'!" || kdialog --error "Error:\n$out"
+Exec[sr@ijekavian]=cmpr=`kdialog --menu "Компресија:" c "брза" hc "висока" --default "брза" --geometry 40x50`; if [ "$cmpr" = "" ]; then exit 0; fi && out=`cd %d && lz4c -y -$cmpr "%N" "%N.lz4" 2>&1` && kdialog --title "Компресор" --passivepopup "Паковање '%N' завршено!" || kdialog --error "Грешка:\n$out"

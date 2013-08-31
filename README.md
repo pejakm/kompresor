@@ -58,6 +58,7 @@ Details
  * .quad	(`quad`)
  * .balz	(`balz`)
  * .rz		(`rzip`)
+ * .lz4		(`lz4c`)
 
 **Dependencies**
 
@@ -68,7 +69,7 @@ Check above what do you need for all service menus to be displayed and usable.
 Current version
 ----------------------------------------------------------------------------------------
 
-The current stable version of Kompresor service menus is 0.1
+The current stable version of Kompresor service menus is 0.1.1
 
 Changelog and Bug reporting
 ----------------------------------------------------------------------------------------

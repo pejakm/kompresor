@@ -2,7 +2,7 @@
 # Maintainer: Mladen Pejaković <pejakm@autistici.org>
 
 pkgname=kompresor
-pkgver=0.1
+pkgver=0.1.1
 pkgrel=1
 arch=('any')
 url='https://github.com/pejakm/kompresor'
@@ -15,6 +15,7 @@ optdepends=('arc: for arc archives'
             'fastjar: for jar archives'
             'gzip: for gz archives'
             'lrzip: for lrz archives'
+            'lz4c: for lz4 archives'
             'lzip: for lz archives'
             'quad: for quad archives'
             'rar: for rar archives'
