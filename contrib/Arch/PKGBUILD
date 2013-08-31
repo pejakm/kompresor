@@ -26,7 +26,7 @@ optdepends=('arc: for arc archives'
             'zzip: for zz archives'
             'bin32-lha: for lha archives')
 source=("https://github.com/pejakm/${pkgname}/archive/v${pkgver}.zip")
-sha1sums=('e2379c2e7ae1c971f50c852fd5457d9d85d0aa71')
+sha1sums=('021b9f5b8426f8b61158293c37a9b9e0627a77cf')
 
 # build() {
 # }
